@@ -1,0 +1,16 @@
+<div class="movie-wrapper" ng-app>
+  <div class="search">
+    <input #title type="text"  (keyup.enter)="GetItems(title)">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </div>
+  <div class="clearfix"></div>
+  <div class="thumbnail" *ngFor="let item of items">
+      <a [routerLink]="['/detay',item.imdbID]">
+      <img [src]="item.Poster">
+
+      <h1>{{item.Title}}</h1>
+      <h2>{{item.Type}}</h2>
+      <div class="rate">{{item.Year}}</div>
+    </a>
+  </div>
+</div>

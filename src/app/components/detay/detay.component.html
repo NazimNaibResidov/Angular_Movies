@@ -1,0 +1,49 @@
+<div class="movie-wrapper">
+  <div class="detail-left">
+    <h1>{{item.Title}}</h1>
+    <p>{{item.Writer}}</p>
+    <table>
+      <tr>
+        <td>Oyuncular</td>
+        <td>
+          <span>
+           {{item.Actors}}
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>Yönetmen</td>
+        <td>{{item.Director}}</td>
+      </tr>
+      <tr>
+        <td>Genres</td>
+        <td>
+        {{item.Genre}}
+        </td>
+      </tr>
+      <tr>
+        <td>Süre</td>
+        <td>{{item.Runtime}}</td>
+      </tr>
+      <tr>
+        <td>Imdb Puanı</td>
+        <td>{{item.imdbRating}}</td>
+      </tr>
+      <tr>
+        <td>Yapım Yılı</td>
+        <td>{{item.Released}}</td>
+      </tr>
+    </table>
+    <br><br><br>
+    <h1>Trailer</h1>
+    <video controls>
+      <source
+        [src]="item.Poster"
+        type="video/mp4"> Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <div class="detail-right">
+    <img
+      [src]="item.Poster">
+  </div>
+</div>
